@@ -1,0 +1,50 @@
+[
+  {
+    "event": "gun",
+    "source": "효과음/원본/sci/Audio/laserRetro_001.ogg",
+    "runtime": "game/public/assets/sfx/gun.mp3",
+    "license": "CC0"
+  },
+  {
+    "event": "fire",
+    "source": "효과음/원본/sci/Audio/explosionCrunch_000.ogg",
+    "runtime": "game/public/assets/sfx/fire.mp3",
+    "license": "CC0"
+  },
+  {
+    "event": "ice",
+    "source": "효과음/원본/impact/Audio/impactGlass_light_001.ogg",
+    "runtime": "game/public/assets/sfx/ice.mp3",
+    "license": "CC0"
+  },
+  {
+    "event": "hit",
+    "source": "효과음/원본/impact/Audio/impactSoft_medium_002.ogg",
+    "runtime": "game/public/assets/sfx/hit.mp3",
+    "license": "CC0"
+  },
+  {
+    "event": "destroy",
+    "source": "효과음/원본/sci/Audio/explosionCrunch_002.ogg",
+    "runtime": "game/public/assets/sfx/destroy.mp3",
+    "license": "CC0"
+  },
+  {
+    "event": "pickup",
+    "source": "효과음/원본/ui/Audio/confirmation_001.ogg",
+    "runtime": "game/public/assets/sfx/pickup.mp3",
+    "license": "CC0"
+  },
+  {
+    "event": "clear",
+    "source": "효과음/원본/ui/Audio/confirmation_002.ogg",
+    "runtime": "game/public/assets/sfx/clear.mp3",
+    "license": "CC0"
+  },
+  {
+    "event": "select",
+    "source": "효과음/원본/ui/Audio/select_001.ogg",
+    "runtime": "game/public/assets/sfx/select.mp3",
+    "license": "CC0"
+  }
+]

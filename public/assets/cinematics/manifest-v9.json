@@ -1,0 +1,74 @@
+[
+  {
+    "file": "clear.mp4",
+    "source": "연출영상/스테이지클리어-v4/index.html",
+    "hyperframesVersion": "0.8.150",
+    "sha256": "bee1114ad45b4a5075d9c9731c147b79237b9d0828ef4ce45e856f29c9765814",
+    "verification": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "1.800000",
+        "size": "646721"
+      }
+    },
+    "timing": "fold .08-.65, stamp .70-.90, quiet hold to 1.80"
+  },
+  {
+    "file": "ultimate.mp4",
+    "source": "연출영상/필살기출격-v4/index.html",
+    "hyperframesVersion": "0.8.150",
+    "sha256": "8974072a6256305bdfdcef0a6ace652105be6160d5522d15e38727b9412112b0",
+    "verification": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "1.000000",
+        "size": "398473"
+      }
+    },
+    "timing": "wings .04-.36, portrait .16-.85, exit .85-1.00"
+  },
+  {
+    "file": "warning.mp4",
+    "source": "연출영상/보스경고-v4/index.html",
+    "hyperframesVersion": "0.8.150",
+    "sha256": "4ee7a0acffd9d99f52eab8ba09c8919969b2555b79e797c5345d76dc441c6444",
+    "verification": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "2.000000",
+        "size": "761055"
+      }
+    },
+    "timing": "bands .08-.48, one soft urgency pulse .25-.95, exit 1.70-2.00"
+  }
+]

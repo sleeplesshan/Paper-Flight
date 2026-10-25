@@ -1,0 +1,150 @@
+{
+  "characterId": "paper-boss-burst",
+  "engine": "component-row",
+  "game_input": "sprite-sheet-alpha.png",
+  "degraded_static_fallback": false,
+  "curation_applied": true,
+  "frame_variant": "pixel",
+  "sprite_sheet_alpha": "sprite-sheet-alpha.png",
+  "sprite_sheet_alpha_report": "sprite-sheet-alpha.report.json",
+  "base_image": "base-source.webp",
+  "cell": {
+    "shape": "square",
+    "width": 256,
+    "height": 256,
+    "safe_margin_x": 16,
+    "safe_margin_y": 16,
+    "size": 256,
+    "safe_margin": 16
+  },
+  "chroma_key": {
+    "name": "cyan",
+    "hex": "#00FFFF",
+    "rgb": [
+      0,
+      255,
+      255
+    ],
+    "selection": "auto",
+    "score": 218.08,
+    "min_subject_distance": 214.75,
+    "background": {
+      "mode": "transparent",
+      "opaque_border_fraction": 0.04,
+      "subject_pixels": 22679
+    },
+    "candidates": [
+      {
+        "name": "magenta",
+        "hex": "#FF00FF",
+        "score": 207.61,
+        "min_subject_distance": 204.4,
+        "clears_erase_radius": true
+      },
+      {
+        "name": "green",
+        "hex": "#00FF00",
+        "score": 207.64,
+        "min_subject_distance": 204.75,
+        "clears_erase_radius": true
+      },
+      {
+        "name": "cyan",
+        "hex": "#00FFFF",
+        "score": 218.08,
+        "min_subject_distance": 214.75,
+        "clears_erase_radius": true
+      },
+      {
+        "name": "blue",
+        "hex": "#004DFF",
+        "score": 192.72,
+        "min_subject_distance": 187.87,
+        "clears_erase_radius": true
+      }
+    ],
+    "selection_reason": "highest 1st-percentile subject distance among the 4 candidate(s) clearing the 96 erase radius"
+  },
+  "animation": {
+    "cellWidth": 256,
+    "cellHeight": 256,
+    "columns": 8,
+    "rows": {
+      "burst": {
+        "row": 0,
+        "frames": 8,
+        "fps": 8,
+        "durations_ms": [
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125
+        ],
+        "loop": false,
+        "frame_variant": "pixel"
+      }
+    }
+  },
+  "frame_layout": {
+    "sheetWidth": 2048,
+    "sheetHeight": 256,
+    "cellWidth": 256,
+    "cellHeight": 256,
+    "rows": {
+      "burst": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "x": 256,
+          "y": 0,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "x": 512,
+          "y": 0,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "x": 768,
+          "y": 0,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "x": 1024,
+          "y": 0,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "x": 1280,
+          "y": 0,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "x": 1536,
+          "y": 0,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "x": 1792,
+          "y": 0,
+          "w": 256,
+          "h": 256
+        }
+      ]
+    }
+  }
+}

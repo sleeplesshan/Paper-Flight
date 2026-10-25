@@ -1,0 +1,1010 @@
+[
+  {
+    "key": "pencil",
+    "source": "basic-atlas.png",
+    "rect": [
+      0,
+      0,
+      313,
+      313
+    ],
+    "trim": [
+      121,
+      92,
+      203,
+      313
+    ],
+    "size": [
+      82,
+      221
+    ],
+    "alpha": true
+  },
+  {
+    "key": "pencil-evolved",
+    "source": "basic-atlas.png",
+    "rect": [
+      313,
+      0,
+      626,
+      313
+    ],
+    "trim": [
+      81,
+      27,
+      235,
+      313
+    ],
+    "size": [
+      154,
+      286
+    ],
+    "alpha": true
+  },
+  {
+    "key": "propeller",
+    "source": "basic-atlas.png",
+    "rect": [
+      626,
+      0,
+      939,
+      313
+    ],
+    "trim": [
+      47,
+      98,
+      261,
+      306
+    ],
+    "size": [
+      214,
+      208
+    ],
+    "alpha": true
+  },
+  {
+    "key": "propeller-evolved",
+    "source": "basic-atlas.png",
+    "rect": [
+      939,
+      0,
+      1252,
+      313
+    ],
+    "trim": [
+      20,
+      57,
+      287,
+      313
+    ],
+    "size": [
+      267,
+      256
+    ],
+    "alpha": true
+  },
+  {
+    "key": "spoon",
+    "source": "basic-atlas.png",
+    "rect": [
+      0,
+      313,
+      313,
+      626
+    ],
+    "trim": [
+      111,
+      0,
+      209,
+      313
+    ],
+    "size": [
+      98,
+      313
+    ],
+    "alpha": true
+  },
+  {
+    "key": "fork",
+    "source": "basic-atlas.png",
+    "rect": [
+      313,
+      313,
+      626,
+      626
+    ],
+    "trim": [
+      81,
+      0,
+      235,
+      313
+    ],
+    "size": [
+      154,
+      313
+    ],
+    "alpha": true
+  },
+  {
+    "key": "knife",
+    "source": "basic-atlas.png",
+    "rect": [
+      626,
+      313,
+      939,
+      626
+    ],
+    "trim": [
+      123,
+      44,
+      189,
+      313
+    ],
+    "size": [
+      66,
+      269
+    ],
+    "alpha": true
+  },
+  {
+    "key": "leaf",
+    "source": "basic-atlas.png",
+    "rect": [
+      939,
+      313,
+      1252,
+      626
+    ],
+    "trim": [
+      71,
+      0,
+      237,
+      313
+    ],
+    "size": [
+      166,
+      313
+    ],
+    "alpha": true
+  },
+  {
+    "key": "star",
+    "source": "basic-atlas.png",
+    "rect": [
+      0,
+      626,
+      313,
+      939
+    ],
+    "trim": [
+      48,
+      0,
+      266,
+      278
+    ],
+    "size": [
+      218,
+      278
+    ],
+    "alpha": true
+  },
+  {
+    "key": "wind",
+    "source": "basic-atlas.png",
+    "rect": [
+      313,
+      626,
+      626,
+      939
+    ],
+    "trim": [
+      47,
+      0,
+      270,
+      286
+    ],
+    "size": [
+      223,
+      286
+    ],
+    "alpha": true
+  },
+  {
+    "key": "arrow",
+    "source": "basic-atlas.png",
+    "rect": [
+      626,
+      626,
+      939,
+      939
+    ],
+    "trim": [
+      47,
+      0,
+      268,
+      281
+    ],
+    "size": [
+      221,
+      281
+    ],
+    "alpha": true
+  },
+  {
+    "key": "drop",
+    "source": "basic-atlas.png",
+    "rect": [
+      939,
+      626,
+      1252,
+      939
+    ],
+    "trim": [
+      89,
+      0,
+      228,
+      285
+    ],
+    "size": [
+      139,
+      285
+    ],
+    "alpha": true
+  },
+  {
+    "key": "companion",
+    "source": "basic-atlas.png",
+    "rect": [
+      0,
+      939,
+      313,
+      1252
+    ],
+    "trim": [
+      58,
+      25,
+      264,
+      261
+    ],
+    "size": [
+      206,
+      236
+    ],
+    "alpha": true
+  },
+  {
+    "key": "shield",
+    "source": "basic-atlas.png",
+    "rect": [
+      313,
+      939,
+      626,
+      1252
+    ],
+    "trim": [
+      59,
+      15,
+      256,
+      263
+    ],
+    "size": [
+      197,
+      248
+    ],
+    "alpha": true
+  },
+  {
+    "key": "shield-petal",
+    "source": "basic-atlas.png",
+    "rect": [
+      626,
+      939,
+      939,
+      1252
+    ],
+    "trim": [
+      42,
+      28,
+      273,
+      256
+    ],
+    "size": [
+      231,
+      228
+    ],
+    "alpha": true
+  },
+  {
+    "key": "seed",
+    "source": "basic-atlas.png",
+    "rect": [
+      939,
+      939,
+      1252,
+      1252
+    ],
+    "trim": [
+      113,
+      85,
+      210,
+      237
+    ],
+    "size": [
+      97,
+      152
+    ],
+    "alpha": true
+  },
+  {
+    "key": "firebomb",
+    "source": "special-atlas.png",
+    "rect": [
+      0,
+      0,
+      313,
+      313
+    ],
+    "trim": [
+      73,
+      71,
+      253,
+      312
+    ],
+    "size": [
+      180,
+      241
+    ],
+    "alpha": true
+  },
+  {
+    "key": "icebomb",
+    "source": "special-atlas.png",
+    "rect": [
+      313,
+      0,
+      626,
+      313
+    ],
+    "trim": [
+      62,
+      61,
+      261,
+      313
+    ],
+    "size": [
+      199,
+      252
+    ],
+    "alpha": true
+  },
+  {
+    "key": "soundbomb",
+    "source": "special-atlas.png",
+    "rect": [
+      626,
+      0,
+      939,
+      313
+    ],
+    "trim": [
+      56,
+      77,
+      261,
+      313
+    ],
+    "size": [
+      205,
+      236
+    ],
+    "alpha": true
+  },
+  {
+    "key": "missile",
+    "source": "special-atlas.png",
+    "rect": [
+      939,
+      0,
+      1252,
+      313
+    ],
+    "trim": [
+      76,
+      40,
+      243,
+      313
+    ],
+    "size": [
+      167,
+      273
+    ],
+    "alpha": true
+  },
+  {
+    "key": "tray",
+    "source": "special-atlas.png",
+    "rect": [
+      0,
+      313,
+      313,
+      626
+    ],
+    "trim": [
+      46,
+      75,
+      277,
+      284
+    ],
+    "size": [
+      231,
+      209
+    ],
+    "alpha": true
+  },
+  {
+    "key": "root",
+    "source": "special-atlas.png",
+    "rect": [
+      313,
+      313,
+      626,
+      626
+    ],
+    "trim": [
+      105,
+      0,
+      216,
+      313
+    ],
+    "size": [
+      111,
+      313
+    ],
+    "alpha": true
+  },
+  {
+    "key": "log",
+    "source": "special-atlas.png",
+    "rect": [
+      626,
+      313,
+      939,
+      626
+    ],
+    "trim": [
+      8,
+      0,
+      308,
+      230
+    ],
+    "size": [
+      300,
+      230
+    ],
+    "alpha": true
+  },
+  {
+    "key": "meteor",
+    "source": "special-atlas.png",
+    "rect": [
+      939,
+      313,
+      1252,
+      626
+    ],
+    "trim": [
+      74,
+      0,
+      245,
+      310
+    ],
+    "size": [
+      171,
+      310
+    ],
+    "alpha": true
+  },
+  {
+    "key": "vortex",
+    "source": "special-atlas.png",
+    "rect": [
+      0,
+      626,
+      313,
+      939
+    ],
+    "trim": [
+      54,
+      32,
+      270,
+      313
+    ],
+    "size": [
+      216,
+      281
+    ],
+    "alpha": true
+  },
+  {
+    "key": "spear",
+    "source": "special-atlas.png",
+    "rect": [
+      313,
+      626,
+      626,
+      939
+    ],
+    "trim": [
+      83,
+      14,
+      234,
+      313
+    ],
+    "size": [
+      151,
+      299
+    ],
+    "alpha": true
+  },
+  {
+    "key": "shuriken",
+    "source": "special-atlas.png",
+    "rect": [
+      626,
+      626,
+      939,
+      939
+    ],
+    "trim": [
+      30,
+      33,
+      284,
+      290
+    ],
+    "size": [
+      254,
+      257
+    ],
+    "alpha": true
+  },
+  {
+    "key": "bubble",
+    "source": "special-atlas.png",
+    "rect": [
+      939,
+      626,
+      1252,
+      939
+    ],
+    "trim": [
+      45,
+      51,
+      273,
+      278
+    ],
+    "size": [
+      228,
+      227
+    ],
+    "alpha": true
+  },
+  {
+    "key": "phoenix",
+    "source": "special-atlas.png",
+    "rect": [
+      0,
+      939,
+      313,
+      1252
+    ],
+    "trim": [
+      30,
+      0,
+      308,
+      274
+    ],
+    "size": [
+      278,
+      274
+    ],
+    "alpha": true
+  },
+  {
+    "key": "crystal",
+    "source": "special-atlas.png",
+    "rect": [
+      313,
+      939,
+      626,
+      1252
+    ],
+    "trim": [
+      45,
+      0,
+      272,
+      253
+    ],
+    "size": [
+      227,
+      253
+    ],
+    "alpha": true
+  },
+  {
+    "key": "crescent",
+    "source": "special-atlas.png",
+    "rect": [
+      626,
+      939,
+      939,
+      1252
+    ],
+    "trim": [
+      14,
+      30,
+      313,
+      248
+    ],
+    "size": [
+      299,
+      218
+    ],
+    "alpha": true
+  },
+  {
+    "key": "table",
+    "source": "special-atlas.png",
+    "rect": [
+      939,
+      939,
+      1252,
+      1252
+    ],
+    "trim": [
+      0,
+      29,
+      301,
+      225
+    ],
+    "size": [
+      301,
+      196
+    ],
+    "alpha": true
+  },
+  {
+    "key": "impact0",
+    "source": "parts-atlas.png",
+    "rect": [
+      0,
+      0,
+      313,
+      313
+    ],
+    "trim": [
+      115,
+      143,
+      230,
+      262
+    ],
+    "size": [
+      115,
+      119
+    ],
+    "alpha": true
+  },
+  {
+    "key": "impact1",
+    "source": "parts-atlas.png",
+    "rect": [
+      313,
+      0,
+      626,
+      313
+    ],
+    "trim": [
+      49,
+      90,
+      259,
+      312
+    ],
+    "size": [
+      210,
+      222
+    ],
+    "alpha": true
+  },
+  {
+    "key": "impact2",
+    "source": "parts-atlas.png",
+    "rect": [
+      626,
+      0,
+      939,
+      313
+    ],
+    "trim": [
+      19,
+      78,
+      263,
+      313
+    ],
+    "size": [
+      244,
+      235
+    ],
+    "alpha": true
+  },
+  {
+    "key": "impact3",
+    "source": "parts-atlas.png",
+    "rect": [
+      939,
+      0,
+      1252,
+      313
+    ],
+    "trim": [
+      41,
+      109,
+      245,
+      288
+    ],
+    "size": [
+      204,
+      179
+    ],
+    "alpha": true
+  },
+  {
+    "key": "burst0",
+    "source": "parts-atlas.png",
+    "rect": [
+      0,
+      313,
+      313,
+      626
+    ],
+    "trim": [
+      43,
+      56,
+      294,
+      290
+    ],
+    "size": [
+      251,
+      234
+    ],
+    "alpha": true
+  },
+  {
+    "key": "burst1",
+    "source": "parts-atlas.png",
+    "rect": [
+      313,
+      313,
+      626,
+      626
+    ],
+    "trim": [
+      9,
+      35,
+      301,
+      312
+    ],
+    "size": [
+      292,
+      277
+    ],
+    "alpha": true
+  },
+  {
+    "key": "burst2",
+    "source": "parts-atlas.png",
+    "rect": [
+      626,
+      313,
+      939,
+      626
+    ],
+    "trim": [
+      18,
+      0,
+      302,
+      310
+    ],
+    "size": [
+      284,
+      310
+    ],
+    "alpha": true
+  },
+  {
+    "key": "burst3",
+    "source": "parts-atlas.png",
+    "rect": [
+      939,
+      313,
+      1252,
+      626
+    ],
+    "trim": [
+      45,
+      43,
+      274,
+      298
+    ],
+    "size": [
+      229,
+      255
+    ],
+    "alpha": true
+  },
+  {
+    "key": "root-stem",
+    "source": "parts-atlas.png",
+    "rect": [
+      0,
+      626,
+      313,
+      939
+    ],
+    "trim": [
+      108,
+      17,
+      226,
+      269
+    ],
+    "size": [
+      118,
+      252
+    ],
+    "alpha": true
+  },
+  {
+    "key": "root-tip",
+    "source": "parts-atlas.png",
+    "rect": [
+      313,
+      626,
+      626,
+      939
+    ],
+    "trim": [
+      81,
+      36,
+      227,
+      273
+    ],
+    "size": [
+      146,
+      237
+    ],
+    "alpha": true
+  },
+  {
+    "key": "king-leaf",
+    "source": "parts-atlas.png",
+    "rect": [
+      626,
+      626,
+      939,
+      939
+    ],
+    "trim": [
+      76,
+      73,
+      209,
+      250
+    ],
+    "size": [
+      133,
+      177
+    ],
+    "alpha": true
+  },
+  {
+    "key": "log-body",
+    "source": "parts-atlas.png",
+    "rect": [
+      939,
+      626,
+      1252,
+      939
+    ],
+    "trim": [
+      12,
+      93,
+      262,
+      313
+    ],
+    "size": [
+      250,
+      220
+    ],
+    "alpha": true
+  },
+  {
+    "key": "log-end",
+    "source": "parts-atlas.png",
+    "rect": [
+      0,
+      939,
+      313,
+      1252
+    ],
+    "trim": [
+      56,
+      8,
+      280,
+      231
+    ],
+    "size": [
+      224,
+      223
+    ],
+    "alpha": true
+  },
+  {
+    "key": "sparkle",
+    "source": "parts-atlas.png",
+    "rect": [
+      313,
+      939,
+      626,
+      1252
+    ],
+    "trim": [
+      87,
+      39,
+      234,
+      199
+    ],
+    "size": [
+      147,
+      160
+    ],
+    "alpha": true
+  },
+  {
+    "key": "pickup",
+    "source": "parts-atlas.png",
+    "rect": [
+      626,
+      939,
+      939,
+      1252
+    ],
+    "trim": [
+      10,
+      59,
+      313,
+      194
+    ],
+    "size": [
+      303,
+      135
+    ],
+    "alpha": true
+  },
+  {
+    "key": "crane",
+    "source": "parts-atlas.png",
+    "rect": [
+      939,
+      939,
+      1252,
+      1252
+    ],
+    "trim": [
+      0,
+      0,
+      296,
+      240
+    ],
+    "size": [
+      296,
+      240
+    ],
+    "alpha": true
+  }
+]

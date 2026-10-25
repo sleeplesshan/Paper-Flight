@@ -1,0 +1,5 @@
+Paperlogy Regular / SemiBold (local WOFF2)
+Official: https://freesentation.blog/paperlogyfont
+Font distribution: https://github.com/fonts-archive/Paperlogy
+Original license: https://www.designptn.com/wp-content/uploads/2024/08/OFL-license.txt
+SIL Open Font License; full text included as Paperlogy-OFL.txt.

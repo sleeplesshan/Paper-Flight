@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./e2e',timeout:60000,fullyParallel:false,use:{baseURL:process.env.PLAYWRIGHT_BASE_URL??'http://localhost:4173',viewport:{width:1180,height:820},hasTouch:true},projects:[{name:'chromium',use:{browserName:'chromium',channel:process.env.PLAYWRIGHT_CHROMIUM_CHANNEL}},{name:'webkit',use:{browserName:'webkit',launchOptions:process.env.PLAYWRIGHT_WEBKIT_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_WEBKIT_EXECUTABLE}:{}}}],reporter:[['list'],['json',{outputFile:'test-results/report.json'}]]});

@@ -1,0 +1,12 @@
+/* A real, opaque top-level strip occupies only the existing 32px clearance.
+   No clipping trick or extra layout padding. Physical iPad verification needed.
+   https://github.com/WebKit/WebKit/blob/main/Source/WebCore/page/LocalFrameView.cpp */
+#status-surface{display:none}
+.status-surface-active #status-surface{
+ display:block;position:fixed;top:0;left:0;right:0;height:11px;
+ z-index:2147483647;pointer-events:none;background-color:#eeeae0;
+}
+
+/* A/B comparison in the same installed app, without touching game storage. */
+html[data-screen-mode=reference] #status-surface{display:none}
+html[data-screen-mode=header].status-surface-active #status-surface{height:32px;pointer-events:auto}

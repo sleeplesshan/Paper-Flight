@@ -1,0 +1,11 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+validation-results/
+.env
+.env.*
+.DS_Store
+*.tar
+*.tar.gz
+.openai/

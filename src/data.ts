@@ -1,0 +1,44 @@
+import {t as localize,msg} from './i18n';
+import {normalizeMedalReveal} from './medals';
+import {emptyGrowth,normalizeGrowth,shieldConfig,type Growth,type Track,type AttackTag} from './arsenal';
+export const W=1000,H=560;
+export const stages=[
+ [localize('바다'),localize('689 항공모함'),'#dcecf0',localize('별')],[localize('초원'),localize('풍차 요새'),'#e6edcd',localize('하트')],[localize('숲'),localize('나무 비행선'),'#d9e7d5',localize('다이아')],[localize('사막'),localize('스핑크스 비행선'),'#f1e3c4',localize('체크')],[localize('설원'),localize('빙하 요새'),'#e8f1f3',localize('동그라미')],[localize('화산'),localize('화산 거북선'),'#f1d9ca',localize('엑스')],[localize('도시'),localize('종이 로봇 비행선'),'#dde2ea',localize('뒤집힌하트')],[localize('구름'),localize('폭풍 고래'),'#e5eaf4',localize('꺾쇠')],[localize('우주'),localize('달 기지'),'#dbdced',localize('각진문양')],[localize('종이 요새'),localize('종이 왕관 요새'),'#ebe4d8',localize('눈꽃')]
+].map(([name,boss,color,gem],i)=>({id:i+1,name,boss,color,gem,background:`/assets/backgrounds/stage${i+1}.webp`,atlas:`/assets/enemies/stage${i+1}.png`}));
+export const aircraft=[
+ {id:'3',name:localize('뾰족 날개'),need:0},{id:'4',name:localize('동글 날개'),need:0},{id:'6',name:localize('창문 비행기'),need:0},{id:'7',name:localize('날개 달린 배'),need:0},{id:'1',name:localize('별빛 비행기'),need:2},{id:'2',name:localize('헬리콥터'),need:4},{id:'5',name:localize('갈래 날개'),need:6},{id:'6b',name:localize('하늘 열기구'),need:8}
+];
+export type Mode='start'|'select'|'launch'|'intro'|'playing'|'promise'|'clear'|'complete'|'cards';
+export type Enemy={id:number,x:number,y:number,hp:number,max:number,kind:'small'|'mini'|'boss',variant:number,t:number,fire:number,frozen:number,hit:number,originX:number,warning:number,targetX:number,pattern?:number,charge?:number,chargeState?:'align'|'dash'|'return',chargeTimer?:number,chargeDuration?:number,chargeFromX?:number,chargeFromY?:number,formation?:number,shooter?:boolean,leader?:boolean,drift?:number,killedBy?:number,killSource?:'normal'|'ultimate'};
+export type Bullet={x:number,y:number,vx:number,vy:number,enemy:boolean,r:number,damage?:number,source?:'small'|'boss'};
+export type Bomb={kind:'fire'|'ice',x:number,y:number,startX:number,startY:number,targetX:number,targetY:number,elapsed:number,duration:number};
+export type Capsule={x:number,y:number,kind:'fire'|'ice',speed?:number};
+export type Effect={x:number,y:number,kind:'fire'|'ice'|'hit'|'destroy'|'gun'|'burst'|'contact'|'pickup'|'block',t:number,color?:string,size?:number,slot?:0|1};
+export type CardReward={id:string,kind:'mini'|'clear',status:'offered'|'showcase'|'done',remaining:number};
+export type Cinematic={kind:'clear'|'ultimate',remaining:number,duration:number};
+export type BossDefeat={kind:'mini'|'boss',x:number,y:number,variant:number,elapsed:number,playerX:number,playerY:number};
+export const BOSS_DEFEAT_TIMING={miniExplosion:.9,bossExplosion:1.1,hold:.2,departure:.7} as const;
+export type CardApply={track:Track,remaining:number,duration:number};
+export type Run={id:string,campaignId?:string|null,stage:number,craft:string,mode:Mode,time:number,phase:number,phaseTime:number,spawn:number,shot:number,auto:boolean,hearts:number,fire:number,ice:number,x:number,y:number,invuln:number,enemies:Enemy[],bullets:Bullet[],bombs:Bomb[],capsules:Capsule[],effects:Effect[],seed:number,nextId:number,kills:number,transition:number,rewarded:boolean;adventureScore:number;creditedScore:number;reward:CardReward|null;claimedRewards:string[];ultimate:{charge:number,pending:boolean,level:number};cinematic:Cinematic|null;supply:{clock:number,delayed:number,pending:{x:number,y:number,kind:'fire'|'ice',remaining:number}|null};growth:Growth;attacks:Shot[];groups:AttackGroup[];scheduled:ScheduledShot[];nextAttackId:number;cards:Track[];pendingCard:Track|null;cardDone:boolean;lastCard:Track|null;offeredEvolutions:Track[];friendShot:number;friendVolley:number;shields:number[];encounter:EncounterState;combo:{count:number,t:number}|null;medalReveal?:{from:number,to:number,elapsed:number}|null;bossDefeat?:BossDefeat|null;cardApply?:CardApply|null;bossIntro?:{kind:'mini'|'boss',remaining:number,duration:number}|null};
+export type Save={version:4,completions:number,campaign:{id:string,cleared:number[]}|null,gems:number[],points:number,reached:number,remaining:number,music:number,sfx:number,run:Run|null,lastReward:string|null};
+export function initialSave():Save{return {version:4,completions:0,campaign:null,gems:[],points:0,reached:1,remaining:600,music:.3,sfx:.5,run:null,lastReward:null}}
+export function newRun(stage:number,craft:string):Run{return {id:crypto.randomUUID(),stage,craft,mode:'launch',time:0,phase:0,phaseTime:0,spawn:.6,shot:0,auto:false,hearts:10,fire:3,ice:3,x:500,y:450,invuln:2,enemies:[],bullets:[],bombs:[],capsules:[],effects:[],seed:(Date.now()>>>0)||1,nextId:1,kills:0,transition:0,rewarded:false,adventureScore:0,creditedScore:0,reward:null,claimedRewards:[],ultimate:{charge:0,pending:false,level:0},cinematic:null,supply:{clock:10,delayed:0,pending:null},growth:emptyGrowth(),attacks:[],groups:[],scheduled:[],nextAttackId:1,cards:[],pendingCard:null,cardDone:false,lastCard:null,offeredEvolutions:[],friendShot:0,friendVolley:0,shields:[0,0],encounter:{formation:0,rotation:0,showcaseDone:false,support:12,pause:0,dropCooldown:0},combo:null,bossIntro:null,bossDefeat:null,cardApply:null}}
+
+export function isAircraftUnlocked(id:string,gems:number[]){const craft=aircraft.find(c=>c.id===id);const count=new Set(gems.filter(n=>Number.isInteger(n)&&n>=1&&n<=10)).size;return !!craft&&count>=craft.need}
+
+export type Shot={id:number,group:number,key:string,style:'linear'|'bomb'|'wave'|'root',x:number,y:number,sx:number,sy:number,vx:number,vy:number,age:number,life:number,damage:number,r:number,size:number,pierce:number,hits:number[],angle:number,spin:number,zig:number,period:number,split:number,child:boolean,freeze:number,radius:number,level:number,range:number,targetX:number,targetY:number,triggered:boolean,width?:number,height?:number,ultimate?:boolean,art?:string,behavior?:'helix'|'curve'|'orbit'|'constellation'|'cloud'|'phoenix'|'crane',pulse?:number,releaseAge?:number};
+export type AttackGroup={id:number,cap:number,hits:Record<string,number>,once:boolean,kills:number,source?:'normal'|'ultimate'};
+export type ScheduledShot={due:number,shot:Shot,originX?:number,originY?:number};
+export type EncounterState={formation:number,rotation:number,showcaseDone:boolean,support:number,pause:number,dropCooldown:number};
+export function normalizeRun(r:Run):Run {
+ r.adventureScore=Number.isFinite(r.adventureScore)?Math.max(0,r.adventureScore):0;r.creditedScore=Number.isFinite(r.creditedScore)?Math.min(r.adventureScore,Math.max(0,r.creditedScore)):r.adventureScore;r.claimedRewards??=[];r.ultimate??={charge:0,pending:false,level:0};r.ultimate.charge=Math.max(0,Math.min(100,Number(r.ultimate.charge)||0));r.cinematic??=null;r.supply??={clock:10,delayed:0,pending:null};
+ if(r.reward===undefined){r.reward=r.mode==='cards'?{id:r.id+':clear',kind:'clear',status:r.cardDone?'done':'offered',remaining:0}:null;if(r.phase>=2)r.claimedRewards.push(r.id+':mini');}
+ r.bossDefeat??=null;r.cardApply??=null;
+ if(r.bossDefeat){const d=r.bossDefeat;if(!['mini','boss'].includes(d.kind)||![d.x,d.y,d.playerX,d.playerY,d.elapsed].every(Number.isFinite))r.bossDefeat=null;else d.elapsed=Math.max(0,Math.min(d.kind==='mini'?BOSS_DEFEAT_TIMING.miniExplosion:BOSS_DEFEAT_TIMING.bossExplosion+BOSS_DEFEAT_TIMING.hold+BOSS_DEFEAT_TIMING.departure,d.elapsed));}
+ if(r.cardApply){const c=r.cardApply;if(!['basic','special1','special2','friend','shield','ultimate'].includes(c.track)||!Number.isFinite(c.remaining)||!Number.isFinite(c.duration)||c.duration<=0)r.cardApply=null;else c.remaining=Math.max(0,Math.min(c.duration,c.remaining));}
+ r.medalReveal=normalizeMedalReveal(r.medalReveal);r.growth=normalizeGrowth(r.growth);r.bombs??=[];r.attacks??=[];r.groups??=[];r.scheduled??=[];r.nextAttackId??=1;r.cards??=[];r.pendingCard??=null;r.cardDone??=false;r.lastCard??=null;r.offeredEvolutions??=[];r.friendShot??=0;r.friendVolley??=0;r.shields??=[0,0];r.encounter??={formation:0,rotation:0,showcaseDone:false,support:12,pause:0,dropCooldown:0};r.combo??=null;r.bossIntro??=null;
+ // Older snapshots saved the acquired card before a repeated showcase screen.
+ // Complete that acquisition without replaying previews or awarding it again.
+ if(r.mode==='cards'&&(r.reward?.status==='showcase'||r.reward?.status==='done')){r.reward.status='done';r.reward.remaining=0;r.cardDone=true;r.cards=[];r.pendingCard=null;if(!r.claimedRewards.includes(r.reward.id))r.claimedRewards.push(r.reward.id);if(r.reward.kind==='mini'){r.mode='playing';r.invuln=Math.max(2,r.invuln);r.encounter.pause=4;r.encounter.showcaseDone=false;r.spawn=6;}else r.mode='clear';}
+ for(let i=0;i<4;i++)r.shields[i]=Number.isFinite(r.shields[i])?Math.min(shieldConfig(r.growth.shield).recharge,Math.max(0,r.shields[i])):0;return r;
+}
