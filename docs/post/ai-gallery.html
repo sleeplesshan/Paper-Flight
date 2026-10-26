@@ -1,0 +1,24 @@
+<article style="max-width:760px;margin:0 auto;padding:20px 12px;line-height:1.85;color:#292929;word-break:keep-all;overflow-wrap:break-word;">
+<h1 style="font-size:28px;line-height:1.4;">유치원생 아이가 종이로 만든 게임, AI로 진짜 만들어줬습니다</h1>
+<p>어느 날 아침, 유치원생 아이가 비행기 그림 몇 장과 종이로 만든 프레임을 가져왔습니다. 자기가 만든 게임이라고 하더라고요.</p>
+<p>처음에는 그냥 비행기를 그렸나 보다 했는데, 설명을 듣다 보니 생각보다 구체적이었습니다. 가운데 네모는 화면이고, 옆에 그려놓은 건 버튼. 어떤 공격이 나가고, 적을 이기면 어떤 보석을 받는지까지 설명했습니다. 아이 머릿속에서는 이미 게임이 돌아가고 있었던 것 같습니다.</p>
+<figure style="margin:24px 0;"><img src="https://raw.githubusercontent.com/sleeplesshan/Paper-Flight/main/docs/images/original-frame.jpg" alt="아이가 만든 종이 게임판" style="width:100%;height:auto;"><figcaption style="text-align:center;color:#777;">아이가 직접 만든 게임판. 화면과 버튼, 적 비행기와 보상까지 들어 있습니다.</figcaption></figure>
+<p>듣다 보니 이걸 실제로 움직이게 만들어서 보여주고 싶어졌습니다. 그래서 게임판과 비행기들을 사진으로 찍는 것부터 시작했습니다.</p>
+<h2>아이의 그림을 살려서 게임으로</h2>
+<p>화면만 그럴듯한 게임으로 바꾸면 아이가 만든 느낌이 사라질 것 같았습니다. 종이 프레임과 연필 선, 조금씩 다른 날개 모양을 최대한 남기려고 했습니다.</p>
+<p>촬영한 원화를 참조해 imagegen으로 기체 선택 이미지, 위에서 본 비행기, 배경과 공격 효과를 만들었습니다. 움직임에 필요한 그림은 sprite-gen을 활용해 프레임으로 추출하고 정렬했습니다.</p>
+<figure style="margin:24px 0;"><img src="https://raw.githubusercontent.com/sleeplesshan/Paper-Flight/main/docs/images/original-aircraft.jpg" alt="비행기 원화" style="width:100%;height:auto;"></figure>
+<p>한 번에 끝나지는 않았습니다. 원본의 뾰족한 날개가 빠지기도 하고, 뒤에 그려진 나무를 기체의 일부처럼 해석하기도 했습니다. 원본과 비교하며 계속 설명하고 수정했습니다.</p>
+<p>Codex와 함께 TypeScript와 Canvas로 전투를 구현하고, 출격·보스 등장·필살기·클리어에는 HyperFrames를 활용한 짧은 연출을 넣었습니다. 사진이 에셋이 되고, 에셋에 움직임이 붙고, 버튼을 누르면 공격이 나가기 시작했습니다.</p>
+<figure style="margin:24px 0;"><img src="https://raw.githubusercontent.com/sleeplesshan/Paper-Flight/main/docs/images/combat.gif" alt="실제 게임에서 나뭇잎과 통나무, 뿌리로 공격하는 장면" style="width:100%;height:auto;"><figcaption style="text-align:center;color:#777;">실제 게임 실행 녹화입니다. 강화된 저장 상태에서 나뭇잎·통나무·뿌리 공격을 시연했습니다.</figcaption></figure>
+<h2>만드는 것보다, 해보고 고치는 일이 더 길었습니다</h2>
+<p>기능이 있다는 것과 재미있게 느껴진다는 것은 꽤 달랐습니다. 업그레이드를 골라도 전후 차이가 잘 안 보이거나, 공격이 커졌는데 오히려 맞히는 범위가 줄어드는 경우도 있었습니다.</p>
+<p>그래서 숫자만 세지는 대신 공격의 모양이 달라지고, 직접 보고 고를 수 있도록 다듬었습니다. 뿌리 끝에서 가지와 잎이 펼쳐지고, 긴 통나무가 굴러가며 적 편대를 쓸어버리는 식입니다.</p>
+<figure style="margin:24px 0;"><img src="https://raw.githubusercontent.com/sleeplesshan/Paper-Flight/main/docs/images/upgrade.gif" alt="업그레이드 전후의 실제 공격을 나란히 비교하는 화면" style="width:100%;height:auto;"><figcaption style="text-align:center;color:#777;">카드를 고르기 전, 지금 공격과 강화 후 공격을 나란히 비교할 수 있습니다.</figcaption></figure>
+<p>이외에도 한글이 카드 밖으로 나오는 문제, 아이패드에서 버벅이는 문제, 여러 손가락으로 조작하는 문제를 하나씩 확인했습니다. 아직 기기별 화면 표시처럼 다듬어야 할 부분도 남아 있습니다.</p>
+<h2>아이의 상상을 그냥 지나치지 않아서 좋았습니다</h2>
+<p>예전 같으면 “잘 그렸네” 하고 보관했을 그림일 수도 있습니다. 이번에는 사진으로 찍고 설명을 듣고, 실제로 눌러보고 움직일 수 있는 형태까지 가져가 봤습니다.</p>
+<p>AI로 제작 시간을 줄인 것도 좋았지만, 아이가 아침에 가져온 작은 상상을 실제 게임으로 만들어줄 수 있었다는 점이 더 크게 남았습니다.</p>
+<p style="padding:18px;background:#f6f3ec;border-left:4px solid #b6a27a;">아이가 먼저 만든 세계를 어른이 따라가며 구현해본 경험이었습니다. 이런 데 AI를 써보는 것도 참 좋구나 싶었습니다.</p>
+<p>제작 과정과 소스: <a href="https://github.com/sleeplesshan/Paper-Flight">Paper Flight GitHub</a></p>
+</article>
